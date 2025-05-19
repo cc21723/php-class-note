@@ -7,8 +7,8 @@
 </head>
 <body>
 <?php 
-
-if(!isset($_GET['login'])){
+session_start();
+if(!isset($_SESSION['login'])){
 ?>
     <form action="check.php" method='post'>
         <div>
@@ -24,10 +24,8 @@ if(!isset($_GET['login'])){
         <input type="reset" value="清空內容">
     </form>
 <?php
-}elseif (isset($_GET['login']) && $_GET['login'] == 1){
-    echo "登入成功";
 }else{
-    echo "登入失敗";
+    echo "登入成功";
 }
 ?>
     
